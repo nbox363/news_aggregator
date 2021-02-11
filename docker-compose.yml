@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  db:
+    image: mysql:5.7
+    ports:
+      - '3306:3306'
+    environment:
+      MYSQL_DATABASE: 'db_django'
+      MYSQL_USER: 'root'
+      MYSQL_PASSWORD: 'password'
+      MYSQL_ROOT_PASSWORD: 'password'
+    volumes:
+      - ./news_aggregator:/var/lib/mysql
