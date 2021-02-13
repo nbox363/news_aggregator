@@ -1,15 +1,13 @@
-# Animal crud
+# News aggregator
 
-# Product service
-
-It's an app that has been created as a test-task for "Stik" company
+It's an app that has been created as a test-task for "AppEvent" company
 
 
 # Install
 
 ```bash
-$ git clone https://github.com/nbox363/animal_crud
-$ cd animal_crud
+$ git clone https://github.com/nbox363/news_aggregator
+$ cd news_aggregator
 ```
 
 Create a virtualenv and activate it:
@@ -23,19 +21,21 @@ Install pip packages:
 $ pip install -r requirements.txt
 ```
 
-# Run
-you may need to stop local postgres before starting docker 
+# Init database 
+you may need to stop local mysql before starting docker compose
 ```
-sudo service postgresql stop
+sudo service mysql stop
 ```
-to run postgres database
+to run mysql database
 ```bash
 docker-compose up
 ```
+get data
+```bash
+python manage.py shell < db.py
+```
 
-
-
-to run server
+# Run
 ```bash
 python manage.py runserver
 ```
