@@ -32,5 +32,3 @@ def get_article(request):
         response.append(a)
 
     return JsonResponse(response, safe=False)
-
-

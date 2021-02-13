@@ -6,6 +6,3 @@ urlpatterns = [
     path('', index),
     path('posts/', get_article),
 ]
-
-
-#
